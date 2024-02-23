@@ -5,7 +5,7 @@
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
+    "server": "nodemon backend/server.js --ignore './client/'",
     "frontend": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "render-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
@@ -22,9 +22,11 @@
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
     "express-fileupload": "^1.2.1",
+    "http-proxy-middleware": "^2.0.6",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.7",
     "nodemailer": "^6.7.2",
+    "nodemon": "^3.1.0",
     "paytmchecksum": "^1.5.0",
     "stripe": "^8.200.0",
     "uuid": "^8.3.2",
