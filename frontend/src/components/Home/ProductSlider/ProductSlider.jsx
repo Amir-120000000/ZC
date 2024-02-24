@@ -17,7 +17,7 @@ const ProductSlider = ({ title, tagline }) => {
                     <h1 className="text-xl font-medium">{title}</h1>
                     <p className="text-sm text-gray-400">{tagline}</p>
                 </div>
-                <Link to="/products" className="bg-primary-blue text-xs font-medium text-white px-5 py-2.5 rounded-sm shadow-lg uppercase">view all</Link>
+                <Link to="/products" className="bg-primary-green text-xs font-medium text-white px-5 py-2.5 rounded-sm shadow-lg uppercase">view all</Link>
             </div>
             <hr />
             {loading ? null :

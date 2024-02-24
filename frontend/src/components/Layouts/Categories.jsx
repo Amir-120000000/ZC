@@ -59,7 +59,7 @@ const Categories = () => {
                         <div className="h-16 w-16">
                             <img draggable="false" className="h-full w-full object-contain" src={item.icon} alt={item.name} />
                         </div>
-                        <span className="text-sm text-gray-800 font-medium group-hover:text-primary-blue">{item.name}</span>
+                        <span className="text-sm text-gray-800 font-medium group-hover:text-primary-green">{item.name}</span>
                     </Link>
                 ))}
 

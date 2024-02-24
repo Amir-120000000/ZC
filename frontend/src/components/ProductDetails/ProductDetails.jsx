@@ -188,8 +188,8 @@ const ProductDetails = () => {
                                     {/* <!-- price desc --> */}
                                     <span className="text-primary-green text-sm font-medium">Special Price</span>
                                     <div className="flex items-baseline gap-2 text-3xl font-medium">
-                                        <span className="text-gray-800">₹{product.price?.toLocaleString()}</span>
-                                        <span className="text-base text-gray-500 line-through">₹{product.cuttedPrice?.toLocaleString()}</span>
+                                        <span className="text-gray-800">${product.price?.toLocaleString()}</span>
+                                        <span className="text-base text-gray-500 line-through">${product.cuttedPrice?.toLocaleString()}</span>
                                         <span className="text-base text-primary-green">{getDiscount(product.price, product.cuttedPrice)}%&nbsp;off</span>
                                     </div>
                                     {product.stock <= 10 && product.stock > 0 && (
@@ -202,7 +202,7 @@ const ProductDetails = () => {
                                     {Array(3).fill("").map((el, i) => (
                                         <p className="text-sm flex items-center gap-1" key={i}>
                                             <span className="text-primary-lightGreen"><LocalOfferIcon sx={{ fontSize: "20px" }} /></span>
-                                            <span className="font-medium ml-2">Bank Offer</span> 15% Instant discount on first Flipkart Pay Later order of 500 and above <Link className="text-primary-blue font-medium" to="/">T&C</Link>
+                                            <span className="font-medium ml-2">Bank Offer</span> 15% Instant discount on first Flipkart Pay Later order of 500 and above <Link className="text-primary-green font-medium" to="/">T&C</Link>
                                         </p>
                                     ))}
                                     {/* <!-- banks offers --> */}
@@ -210,7 +210,7 @@ const ProductDetails = () => {
                                     {/* <!-- warranty & brand --> */}
                                     <div className="flex gap-8 mt-2 items-center text-sm">
                                         <img draggable="false" className="w-20 h-8 p-0.5 border object-contain" src={product.brand?.logo.url} alt={product.brand && product.brand.name} />
-                                        <span>{product.warranty} Year Warranty <Link className="font-medium text-primary-blue" to="/">Know More</Link></span>
+                                        <span>{product.warranty} Year Warranty <Link className="font-medium text-primary-green" to="/">Know More</Link></span>
                                     </div>
                                     {/* <!-- warranty & brand --> */}
 
@@ -242,13 +242,13 @@ const ProductDetails = () => {
                                             <p className="text-gray-500 font-medium">Services</p>
                                             <ul className="flex flex-col gap-2">
                                                 <li>
-                                                    <p className="flex items-center gap-3"><span className="text-primary-blue"><VerifiedUserIcon sx={{ fontSize: "18px" }} /></span> {product.warranty} Year</p>
+                                                    <p className="flex items-center gap-3"><span className="text-primary-green"><VerifiedUserIcon sx={{ fontSize: "18px" }} /></span> {product.warranty} Year</p>
                                                 </li>
                                                 <li>
-                                                    <p className="flex items-center gap-3"><span className="text-primary-blue"><CachedIcon sx={{ fontSize: "18px" }} /></span> 7 Days Replacement Policy</p>
+                                                    <p className="flex items-center gap-3"><span className="text-primary-green"><CachedIcon sx={{ fontSize: "18px" }} /></span> 7 Days Replacement Policy</p>
                                                 </li>
                                                 <li>
-                                                    <p className="flex items-center gap-3"><span className="text-primary-blue"><CurrencyRupeeIcon sx={{ fontSize: "18px" }} /></span> Cash on Delivery available</p>
+                                                    <p className="flex items-center gap-3"><span className="text-primary-green"><CurrencyRupeeIcon sx={{ fontSize: "18px" }} /></span> Cash on Delivery available</p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -259,7 +259,7 @@ const ProductDetails = () => {
                                     {/* <!-- seller details --> */}
                                     <div className="flex gap-16 mt-4 items-center text-sm font-medium">
                                         <p className="text-gray-500">Seller</p>
-                                        <Link className="font-medium text-primary-blue ml-3" to="/">{product.brand && product.brand.name}</Link>
+                                        <Link className="font-medium text-primary-green ml-3" to="/">{product.brand && product.brand.name}</Link>
                                     </div>
                                     {/* <!-- seller details --> */}
 
@@ -362,7 +362,7 @@ const ProductDetails = () => {
                                             )).reverse()
                                         }
                                         {product.reviews?.length > 3 &&
-                                            <button onClick={() => setViewAll(!viewAll)} className="w-1/3 m-2 rounded-sm shadow hover:shadow-lg py-2 bg-primary-blue text-white">{viewAll ? "View Less" : "View All"}</button>
+                                            <button onClick={() => setViewAll(!viewAll)} className="w-1/3 m-2 rounded-sm shadow hover:shadow-lg py-2 bg-primary-green text-white">{viewAll ? "View Less" : "View All"}</button>
                                         }
                                     </div>
                                     {/* <!-- reviews border box --> */}

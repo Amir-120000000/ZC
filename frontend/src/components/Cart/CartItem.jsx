@@ -51,12 +51,12 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
                     {/* <!-- product title --> */}
                     <div className="flex flex-col sm:flex-row justify-between items-start pr-5 gap-1 sm:gap-0">
                         <div className="flex flex-col gap-0.5 sm:w-3/5">
-                            <p className="group-hover:text-primary-blue">{name.length > 42 ? `${name.substring(0, 42)}...` : name}</p>
+                            <p className="group-hover:text-primary-green">{name.length > 42 ? `${name.substring(0, 42)}...` : name}</p>
                             <span className="text-sm text-gray-500">Seller: {seller}</span>
                         </div>
 
                         <div className="flex flex-col sm:gap-2">
-                            <p className="text-sm">Delivery by {getDeliveryDate()} | <span className="text-primary-green">Free</span> <span className="line-through">₹{quantity * 40}</span></p>
+                            <p className="text-sm">Delivery by {getDeliveryDate()} | <span className="text-primary-green">Free</span> <span className="line-through">${quantity * 40}</span></p>
                             <span className="text-xs text-gray-500">7 Days Replacement Policy</span>
                         </div>
 
@@ -65,8 +65,8 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
 
                     {/* <!-- price desc --> */}
                     <div className="flex items-baseline gap-2 text-xl font-medium">
-                        <span>₹{(price * quantity).toLocaleString()}</span>
-                        <span className="text-sm text-gray-500 line-through font-normal">₹{(cuttedPrice * quantity).toLocaleString()}</span>
+                        <span>${(price * quantity).toLocaleString()}</span>
+                        <span className="text-sm text-gray-500 line-through font-normal">${(cuttedPrice * quantity).toLocaleString()}</span>
                         <span className="text-sm text-primary-green">{getDiscount(price, cuttedPrice)}%&nbsp;off</span>
                     </div>
                     {/* <!-- price desc --> */}
@@ -86,7 +86,7 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
                 {/* <!-- quantity --> */}
                 {inCart && (
                     <>
-                    <button onClick={() => saveForLaterHandler(product)} className="sm:ml-4 font-medium hover:text-primary-blue">SAVE FOR LATER</button>
+                    <button onClick={() => saveForLaterHandler(product)} className="sm:ml-4 font-medium hover:text-primary-green">SAVE FOR LATER</button>
                     <button onClick={() => removeCartItem(product)} className="font-medium hover:text-red-600">REMOVE</button>
                     </>
                 )}

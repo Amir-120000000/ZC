@@ -54,7 +54,7 @@ const UpdateOrder = () => {
                 <>
                     {order && order.user && order.shippingInfo && (
                         <div className="flex flex-col gap-4">
-                            <Link to="/admin/orders" className="ml-1 flex items-center gap-0 font-medium text-primary-blue uppercase"><ArrowBackIosIcon sx={{ fontSize: "18px" }} />Go Back</Link>
+                            <Link to="/admin/orders" className="ml-1 flex items-center gap-0 font-medium text-primary-green uppercase"><ArrowBackIosIcon sx={{ fontSize: "18px" }} />Go Back</Link>
 
                             <div className="flex flex-col sm:flex-row bg-white shadow-lg rounded-lg min-w-full">
                                 <div className="sm:w-1/2 border-r">
@@ -117,8 +117,8 @@ const UpdateOrder = () => {
                                             <div className="flex flex-col gap-1 overflow-hidden">
                                                 <p className="text-sm">{name.length > 45 ? `${name.substring(0, 45)}...` : name}</p>
                                                 <p className="text-xs text-gray-600 mt-2">Quantity: {quantity}</p>
-                                                <p className="text-xs text-gray-600">Price: ₹{price.toLocaleString()}</p>
-                                                <span className="font-medium">Total: ₹{(quantity * price).toLocaleString()}</span>
+                                                <p className="text-xs text-gray-600">Price: ${price.toLocaleString()}</p>
+                                                <span className="font-medium">Total: ${(quantity * price).toLocaleString()}</span>
                                             </div>
                                         </div>
 

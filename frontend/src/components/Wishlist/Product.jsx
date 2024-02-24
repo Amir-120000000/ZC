@@ -26,7 +26,7 @@ const Product = (props) => {
                 {/* <!-- product title --> */}
                 <div className="flex justify-between items-start sm:pr-5">
                     <Link to={`/product/${product}`} className="flex flex-col gap-0.5">
-                        <p className="group-hover:text-primary-blue w-56 sm:w-full truncate">{name.length > 85 ? `${name.substring(0, 85)}...` : name}</p>
+                        <p className="group-hover:text-primary-green w-56 sm:w-full truncate">{name.length > 85 ? `${name.substring(0, 85)}...` : name}</p>
                         {/* <!-- rating badge --> */}
                         <span className="text-sm text-gray-500 font-medium flex gap-2 items-center">
                             <span className="text-xs px-1.5 py-0.5 bg-primary-green rounded-sm text-white flex items-center gap-0.5">{ratings} <StarIcon sx={{ fontSize: "14px" }} /></span>
@@ -40,8 +40,8 @@ const Product = (props) => {
 
                 {/* <!-- price desc --> */}
                 <div className="flex items-center gap-2 text-2xl font-medium">
-                    <span>₹{price.toLocaleString()}</span>
-                    <span className="text-sm text-gray-500 line-through font-normal mt-1">₹{cuttedPrice.toLocaleString()}</span>
+                    <span>${price.toLocaleString()}</span>
+                    <span className="text-sm text-gray-500 line-through font-normal mt-1">${cuttedPrice.toLocaleString()}</span>
                     <span className="text-sm text-primary-green mt-1">{getDiscount(price, cuttedPrice)}%&nbsp;off</span>
                 </div>
                 {/* <!-- price desc --> */}

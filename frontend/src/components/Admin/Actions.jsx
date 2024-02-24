@@ -19,7 +19,7 @@ const Actions = ({ id, deleteHandler, name, editRoute }) => {
         <>
             <div className="flex justify-between items-center gap-3">
                 {editRoute !== "review" && (
-                    <Link to={`/admin/${editRoute}/${id}`} className="text-blue-600 hover:bg-blue-200 p-1 rounded-full bg-blue-100">
+                    <Link to={`/admin/${editRoute}/${id}`} className="text-green-600 hover:bg-green-200 p-1 rounded-full bg-green-100">
                         <EditIcon />
                     </Link>
                 )}

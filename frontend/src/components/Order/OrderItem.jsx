@@ -21,11 +21,11 @@ const OrderItem = (props) => {
                 <div className="flex flex-col gap-1 overflow-hidden">
                     <p className="text-sm">{name.length > 40 ? `${name.substring(0, 40)}...` : name}</p>
                     <p className="text-xs text-gray-500 mt-2">Quantity: {quantity}</p>
-                    <p className="text-xs text-gray-500">Total: ₹{(quantity * price).toLocaleString()}</p>
+                    <p className="text-xs text-gray-500">Total: ${(quantity * price).toLocaleString()}</p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row mt-1 sm:mt-0 gap-2 sm:gap-20 sm:w-1/2">
-                    <p className="text-sm">₹{price.toLocaleString()}</p>
+                    <p className="text-sm">${price.toLocaleString()}</p>
 
                     <div className="flex flex-col gap-1.5">
                         <p className="text-sm font-medium flex items-center gap-1">

@@ -123,7 +123,7 @@ const MyOrders = () => {
                             {/* <!-- filters header --> */}
                             <div className="flex items-center justify-between gap-5 px-4 py-2 border-b">
                                 <p className="text-lg font-medium">Filters</p>
-                                <span onClick={clearFilters} className="text-blue-600 font-medium text-sm uppercase cursor-pointer hover:text-blue-700">clear all</span>
+                                <span onClick={clearFilters} className="text-green-600 font-medium text-sm uppercase cursor-pointer hover:text-green-700">clear all</span>
                             </div>
 
                             {/* <!-- order status checkboxes --> */}
@@ -189,7 +189,7 @@ const MyOrders = () => {
                                 {/* <!-- searchbar --> */}
                                 <form onSubmit={searchOrders} className="flex items-center justify-between mx-1 sm:mx-0 sm:w-10/12 bg-white border rounded hover:shadow">
                                     <input value={search} onChange={(e) => setSearch(e.target.value)} type="search" name="search" placeholder="Search your orders here" className="p-2 text-sm outline-none flex-1 rounded-l" />
-                                    <button type="submit" className="h-full text-sm px-1 sm:px-4 py-2.5 text-white bg-primary-blue hover:bg-blue-600 rounded-r flex items-center gap-1">
+                                    <button type="submit" className="h-full text-sm px-1 sm:px-4 py-2.5 text-white bg-primary-green hover:bg-green-600 rounded-r flex items-center gap-1">
                                         <SearchIcon sx={{ fontSize: "22px" }} />
                                         Search Orders
                                     </button>

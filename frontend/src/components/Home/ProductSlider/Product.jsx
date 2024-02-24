@@ -34,7 +34,7 @@ const Product = (props) => {
                 <div className="w-36 h-36">
                     <img draggable="false" className="w-full h-full object-contain" src={images[0].url} alt={name} />
                 </div>
-                <h2 className="text-sm mt-4 group-hover:text-primary-blue">{name.length > 50 ? `${name.substring(0, 50)}...` : name}</h2>
+                <h2 className="text-sm mt-4 group-hover:text-primary-green">{name.length > 50 ? `${name.substring(0, 50)}...` : name}</h2>
             </Link>
             {/* <!-- image & product title --> */}
 
@@ -49,8 +49,8 @@ const Product = (props) => {
 
                 {/* <!-- price container --> */}
                 <div className="flex items-center gap-1.5 text-md font-medium">
-                    <span>₹{price.toLocaleString()}</span>
-                    <span className="text-gray-500 line-through text-xs">₹{cuttedPrice.toLocaleString()}</span>
+                    <span>${price.toLocaleString()}</span>
+                    <span className="text-gray-500 line-through text-xs">${cuttedPrice.toLocaleString()}</span>
                     <span className="text-xs text-primary-green">{getDiscount(price, cuttedPrice)}%&nbsp;off</span>
                 </div>
                 {/* <!-- price container --> */}

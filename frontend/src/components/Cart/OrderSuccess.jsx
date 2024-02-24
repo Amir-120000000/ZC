@@ -37,7 +37,7 @@ const OrderSuccess = ({ success }) => {
                     <img draggable="false" className="w-1/2 h-60 object-contain" src={success ? successfull : failed} alt="Transaction Status" />
                     <h1 className="text-2xl font-semibold">Transaction {success ? "Successfull" : "Failed"}</h1>
                     <p className="mt-4 text-lg text-gray-800">Redirecting to {success ? "orders" : "cart"} in {time} sec</p>
-                    <Link to={success ? "/orders" : "/cart"} className="bg-primary-blue mt-2 py-2.5 px-6 text-white uppercase shadow hover:shadow-lg rounded-sm">go to {success ? "orders" : "cart"}</Link>
+                    <Link to={success ? "/orders" : "/cart"} className="bg-primary-green mt-2 py-2.5 px-6 text-white uppercase shadow hover:shadow-lg rounded-sm">go to {success ? "orders" : "cart"}</Link>
                 </div>
                 {/* <!-- row --> */}
 

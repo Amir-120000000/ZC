@@ -43,7 +43,7 @@ const SecondaryDropDownMenu = () => {
 
                 return (
                     <a className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50 rounded-t" href={redirect} key={i}>
-                        <span className="text-primary-blue">{icon}</span>
+                        <span className="text-primary-green">{icon}</span>
                         {title}
                     </a>
                 )

@@ -43,8 +43,8 @@ const SaveForLaterItem = ({ product, name, seller, price, cuttedPrice, image, st
 
                     {/* <!-- price desc --> */}
                     <div className="flex items-baseline gap-2 text-xl font-medium">
-                        <span>₹{(price * quantity).toLocaleString()}</span>
-                        <span className="text-sm text-gray-500 line-through font-normal">₹{(cuttedPrice * quantity).toLocaleString()}</span>
+                        <span>${(price * quantity).toLocaleString()}</span>
+                        <span className="text-sm text-gray-500 line-through font-normal">${(cuttedPrice * quantity).toLocaleString()}</span>
                         <span className="text-sm text-primary-green">{getDiscount(price, cuttedPrice)}%&nbsp;off</span>
                     </div>
                     {/* <!-- price desc --> */}
@@ -62,7 +62,7 @@ const SaveForLaterItem = ({ product, name, seller, price, cuttedPrice, image, st
                     <span className="w-7 h-7 text-xl font-light bg-gray-50 rounded-full border flex items-center justify-center cursor-not-allowed">+</span>
                 </div>
                 {/* <!-- quantity --> */}
-                <button onClick={() => moveToCartHandler(product, quantity)} className="sm:ml-4 font-medium hover:text-primary-blue">MOVE TO CART</button>
+                <button onClick={() => moveToCartHandler(product, quantity)} className="sm:ml-4 font-medium hover:text-primary-green">MOVE TO CART</button>
                 <button onClick={() => removeFromSaveForLaterHandler(product)} className="font-medium hover:text-red-600">REMOVE</button>
             </div>
             {/* <!-- move to cart --> */}

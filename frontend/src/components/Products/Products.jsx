@@ -77,7 +77,7 @@ const Products = () => {
                             {/* <!-- filters header --> */}
                             <div className="flex items-center justify-between gap-5 px-4 py-2 border-b">
                                 <p className="text-lg font-medium">Filters</p>
-                                <span className="uppercase text-primary-blue text-xs cursor-pointer font-medium" onClick={() => clearFilters()}>clear all</span>
+                                <span className="uppercase text-primary-green text-xs cursor-pointer font-medium" onClick={() => clearFilters()}>clear all</span>
                             </div>
 
                             <div className="flex flex-col gap-2 py-3 text-sm overflow-hidden">
@@ -96,9 +96,9 @@ const Products = () => {
                                     />
 
                                     <div className="flex gap-3 items-center justify-between mb-2 min-w-full">
-                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">₹{price[0].toLocaleString()}</span>
+                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">${price[0].toLocaleString()}</span>
                                         <span className="font-medium text-gray-400">to</span>
-                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">₹{price[1].toLocaleString()}</span>
+                                        <span className="flex-1 border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">${price[1].toLocaleString()}</span>
                                     </div>
                                 </div>
                                 {/* price slider filter */}

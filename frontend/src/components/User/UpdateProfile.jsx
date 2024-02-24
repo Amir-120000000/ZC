@@ -79,7 +79,7 @@ const UpdateProfile = () => {
                 {/* <!-- row --> */}
                 <div className="flex sm:w-4/6 sm:mt-4 m-auto mb-7 bg-white shadow-lg">
                     {/* <!-- sidebar column  --> */}
-                    <div className="loginSidebar bg-primary-blue px-9 py-10 hidden sm:flex flex-col gap-4 w-2/5">
+                    <div className="loginSidebar bg-primary-green px-9 py-10 hidden sm:flex flex-col gap-4 w-2/5">
                         <h1 className="font-medium text-white text-3xl">Looks like you're new here!</h1>
                         <p className="text-gray-200 text-lg pr-2">Sign up with your mobile number to get started</p>
                     </div>
@@ -153,7 +153,7 @@ const UpdateProfile = () => {
                                     </label>
                                 </div>
                                 <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow rounded-sm font-medium hover:shadow-lg">Update</button>
-                                <Link className="hover:bg-gray-100 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium" to="/account">Cancel</Link>
+                                <Link className="hover:bg-gray-100 text-primary-green text-center py-3 w-full shadow border rounded-sm font-medium" to="/account">Cancel</Link>
                             </div>
 
                         </form>

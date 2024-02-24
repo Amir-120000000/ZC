@@ -67,8 +67,8 @@ const OrderDetails = () => {
                                                 <div className="flex flex-col gap-1 overflow-hidden">
                                                     <p className="text-sm">{name.length > 60 ? `${name.substring(0, 60)}...` : name}</p>
                                                     <p className="text-xs text-gray-600 mt-2">Quantity: {quantity}</p>
-                                                    <p className="text-xs text-gray-600">Price: ₹{price.toLocaleString()}</p>
-                                                    <span className="font-medium">Total: ₹{(quantity * price).toLocaleString()}</span>
+                                                    <p className="text-xs text-gray-600">Price: ${price.toLocaleString()}</p>
+                                                    <span className="font-medium">Total: ${(quantity * price).toLocaleString()}</span>
                                                 </div>
                                             </div>
 
